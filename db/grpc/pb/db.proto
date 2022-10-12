@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "github.com/pingcap/go-ycsb/db/grpc/pb";
+
+package db;
+
+service DB {
+  rpc Read(Key) returns (Val) {}
+  rpc Scan(KeyScan) returns (stream Val) {}
+  rpc Put(KeyVal) returns (None) {}
+  rpc Delete(Key) returns (None) {}
+}
+
+message Key {
+  string key = 1;
+}
+
+message KeyScan {
+  string startKey = 1;
+  int32 count = 2;
+}
+
+message KeyVal {
+  string key = 1;
+  bytes val = 2;
+}
+
+message Val {
+  bytes val = 1;
+}
+
+message None {}
