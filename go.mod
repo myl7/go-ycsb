@@ -32,6 +32,8 @@ require (
 	github.com/spf13/cobra v1.0.0
 	github.com/tecbot/gorocksdb v0.0.0-20191217155057-f0fad39f321c
 	github.com/tikv/client-go/v2 v2.0.1-0.20220720064224-aa9ded37d17d
+	go.etcd.io/etcd/client/pkg/v3 v3.5.2
+	go.etcd.io/etcd/client/v3 v3.5.2
 	go.mongodb.org/mongo-driver v1.5.1
 	google.golang.org/api v0.87.0
 	google.golang.org/genproto v0.0.0-20220718134204-073382fd740c
@@ -96,8 +98,6 @@ require (
 	github.com/youmark/pkcs8 v0.0.0-20181117223130-1be2e3e5546d // indirect
 	github.com/yuin/gopher-lua v0.0.0-20181031023651-12c4817b42c5 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.2 // indirect
-	go.etcd.io/etcd/client/pkg/v3 v3.5.2 // indirect
-	go.etcd.io/etcd/client/v3 v3.5.2 // indirect
 	go.opencensus.io v0.23.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
