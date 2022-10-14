@@ -45,8 +45,6 @@ type grpcDB struct {
 	bufPool *util.BufPool
 }
 
-type contextKey string
-
 func (c grpcCreator) Create(p *properties.Properties) (ycsb.DB, error) {
 	addr := p.GetString(grpcAddr, "127.0.0.1:8000")
 
