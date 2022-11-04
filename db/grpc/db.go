@@ -20,6 +20,7 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/go-redis/redis/v9"
 	"github.com/magiconair/properties"
 	"github.com/pingcap/go-ycsb/db/grpc/pb"
 	"github.com/pingcap/go-ycsb/pkg/util"
@@ -87,6 +88,9 @@ func (db *grpcDB) Read(ctx context.Context, table string, key string, fields []s
 	}
 
 	value := val.Val
+	if value == nil {
+		return nil, redis.Nil
+	}
 
 	return db.r.Decode(value, fields)
 }
